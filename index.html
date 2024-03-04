@@ -1,88 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eddy - MG</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleMobile.css">
-    <link rel="icon" type="image/png" href="img/ico.jpg"/>
-</head>
+    <link rel="stylesheet" href="./styles/sass/app.css" />
+    <link rel="icon" type="image/png" href="./assets/ico.png" />
+    <script defer src="./scripts/script.js"></script>
 
-<body>
-    <div class="jogodamemoria">
-        <div class="dados">
-            <h1 id="tentativas">Tentativas: 0</h1>
+    <title>Memory Game RPG - Eddig</title>
+  </head>
+  <body>
+    <section id="memory-game">
+      <div class="wrapper">
+        <h2 class="flips">Flips: <span>00</span></h2>
+        <canvas id="game"></canvas>
+        <img src="./assets/images/overlay.png" alt="overlay" class="overlay" />
+      </div>
+    </section>
+    <section id="controls">
+      <div class="wrapper">
+        <div class="moveKeys">
+          <button id="up">
+            <img src="./assets/icons/chevron-up.svg" alt="control chevron" />
+          </button>
+          <div class="middle">
+            <button id="left">
+              <img
+                src="./assets/icons/chevron-left.svg"
+                alt="control chevron"
+              />
+            </button>
+            <button id="right">
+              <img
+                src="./assets/icons/chevron-right.svg"
+                alt="control chevron"
+              />
+            </button>
+          </div>
+          <button id="down">
+            <img src="./assets/icons/chevron-down.svg" alt="control chevron" />
+          </button>
         </div>
-        <div id="wrapper">
-            <canvas id="canvas1"></canvas>
-            <img src="img/overlay.png" alt="overlay" id="overlay">
+        <div class="actionKeys">
+          <button id="c">C</button>
         </div>
+      </div>
+    </section>
+    <div class="sprites">
+      <img src="./assets/sprites/edd.png" alt="player" id="player" />
+      <img src="./assets/sprites/grass.png" alt="grass" id="grass" />
+      <img src="./assets/sprites/cat.png" alt="cat" id="cat" />
+      <img src="./assets/sprites/hen.png" alt="hen" id="hen" />
+      <img src="./assets/sprites/duck.png" alt="duck" id="duck" />
+      <img src="./assets/sprites/cow.png" alt="cow" id="cow" />
+      <img src="./assets/sprites/ghost.png" alt="ghost" id="ghost" />
+      <img src="./assets/sprites/bat.png" alt="bat" id="bat" />
     </div>
-    <div class="controle">
-        <div class="esquerdaCon">
-            <div id="cima">
-                <button id="upArrow">↑</button>
-            </div>
-            <div class="meio">
-                <button id="leftArrow">←</button>
-                <button id="rightArrow">→</button>
-            </div>
-            <div class="baixo">
-            
-            <button id="downArrow">↓</button>
-            </div>
-        </div>
-        <div class="direitaCon">
-            <button id="keyC">C</button>
-        </div>
-    </div>
-    <div class="animais">
-        <img src="img/edd.png" alt="edd" id="edd">
-        <img src="img/mato.png" alt="mato" id="mato">
-        <img src="img/gato.png" alt="gato" id="gato">
-        <img src="img/galinha.png" alt="galinha" id="galinha">
-        <img src="img/pato.png" alt="pato" id="pato">
-        <img src="img/vaca.png" alt="vaca" id="vaca">
-        <img src="img/fantasma.png" alt="fantasma" id="fantasma">
-        <img src="img/morcego.png" alt="morcego" id="morcego">
-    </div>
-    <div></div>
-    <footer>
-        <div class="pezinho">
-            <h2>Programação para Internet</h2>
-            <div class="container">
-                <div class="divMetade">
-                    <div class="bloquinho">
-                        <h2>Endereço</h2>
-                        <p>IFRN - Campus Santa Cruz/RN</p>
-                    </div>
-                    <div class="divider">
-                        <img src="img/Linha.svg" title="Linha.svg" alt="Linha.svg">
-                    </div>
-                    <div class="bloquinho">
-                        <h2>Professor</h2>
-                        <p>Prof. Marcelo Figueiredo Barbosa Júnior</p>
-                    </div>
-                    <div class="divider">
-                        <img src="img/Linha.svg" title="Linha.svg" alt="Linha.svg">
-                    </div>
-                    <div class="bloquinho">
-                        <h2>Aluno</h2>
-                        <p>Edvaldo Henrique dos Santos</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="divisor">
-            <span class="divisor-linha"></span>
-        </div>
-        <div class="copyright">
-            <p>COPYRIGHT 2023 <strong>EDVALDO HENRIQUE &copy;</strong></p>
-        </div>
-    </footer>
-    <script src="js/script.js"></script>
-</body>
-
+  </body>
 </html>
